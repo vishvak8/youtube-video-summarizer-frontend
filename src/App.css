@@ -1,0 +1,206 @@
+/* App.css */
+
+/* Base Styling */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif; /* Premium font family */
+  background: linear-gradient(to bottom, #667eea, #764ba2, #6c47b8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.app-container {
+  text-align: center;
+  padding: 30px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Card Styling */
+.card {
+  background: linear-gradient(to right, #ffffff, #f9f9f9);
+  color: #333;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Title Styling */
+.title {
+  font-size: 2.5rem;
+  color: #764ba2;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease;
+}
+
+.title:hover {
+  color: #5a67d8;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Input Field */
+.input {
+  padding: 15px;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif; /* Update to premium font */
+  font-weight: 400; /* Optional: Adjust font weight */
+  background: linear-gradient(135deg, #f9f9f9, #ffffff);
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  width: 100%;
+  outline: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.input:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 12px rgba(118, 75, 162, 0.5);
+  background: linear-gradient(135deg, #ffffff, #f0e9f7);
+}
+
+/* Button */
+.button {
+  padding: 15px 25px;
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.4s, background 0.4s;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #5a67d8, #6b46c1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 50px;
+  height: 50px;
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid #764ba2;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Summary Section */
+.summary-section {
+  margin-top: 30px;
+  background: linear-gradient(135deg, #ffffff, #f4f4f4);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  animation: fadeIn 0.5s ease;
+}
+
+.summary-title {
+  font-size: 1.8rem;
+  color: #764ba2;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.summary-text {
+  font-size: 1.2rem;
+  font-family: 'Playfair Display', serif; /* Update to a premium serif font */
+  font-weight: 400; /* Optional: Adjust font weight */
+  color: #333;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logout Button Styling */
+.logout-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.logout-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+  background: linear-gradient(135deg, #ff4b2b, #ff6a3d);
+}
+
+.logout-button:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255, 65, 108, 0.8);
+}
+
+.toggle-container {
+  text-align: center;
+  margin-top: 20px;
+  color: #ffffff; /* Set to white for better visibility on the gradient background */
+}
+
+.toggle-button {
+  background: none;
+  border: none;
+  color: #f5f5f5; /* Add a subtle yellow contrast */
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.toggle-button:hover {
+  text-decoration: underline;
+}
