@@ -53,7 +53,7 @@ const App: React.FC = () => {
       }
 
       const response = await fetch(
-        'https://youtube-video-summarizer-backend-9iey-48y1km80b.vercel.app//process',
+        'https://4125-49-206-12-70.ngrok-free.app/process',
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
