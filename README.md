@@ -1,50 +1,61 @@
-# React + TypeScript + Vite
+# YouTube Video Summarizer – Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend for the YouTube Video Summarizer application, built using **React**, **TypeScript**, and **Vite**. It allows users to register/login using **Nhost authentication**, enter a YouTube video URL, and view an AI-generated summary fetched from the backend.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What the frontend does
 
-## Expanding the ESLint configuration
+- Provides a login/signup flow with Nhost Authentication
+- Lets users input YouTube video URLs through a form
+- Displays a generated summary from the backend
+- Handles invalid URLs, loading states, and error messages with toast notifications
+- Uses a clean and modern UI with gradient styling and animations
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+## Tech Stack Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **Framework**: React + Vite
+- **Language**: TypeScript
+- **Styling**: CSS
+- **Auth**: Nhost Authentication
+- **Backend Communication**: REST (Fetch API)
+- **Notifications**: react-toastify
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## How to run the project
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the repository:
+   
+   git clone https://github.com/vishvak8/youtube-video-summarizer-frontend.git
+
+2. Navigate to the frontend folder:
+
+   cd youtube-video-summarizer-frontend
+
+3. Install dependencies:
+
+   npm install
+
+4. Start the development server:
+
+   npm run dev
+
+5. Open your browser and go to:
+
+   http://localhost:5173
+
+---
+
+## Notes
+-The backend must be running and accessible via the URL configured in the App.tsx file (currently hardcoded with ngrok).
+-Update the backend URL when deploying or switching environments.
+-The nhost.ts file contains the project-specific Nhost configuration for auth and GraphQL integration.
+
+---
+
+## License
+This project is open-source and intended for learning and demonstration purposes.
+
