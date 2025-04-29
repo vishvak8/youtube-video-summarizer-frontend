@@ -1,8 +1,8 @@
 import { NhostClient } from '@nhost/react';
 
 const nhost = new NhostClient({
-  subdomain: 'pcpbxvkqnfgbyqbsydgy', // Your Nhost subdomain
-  region: 'ap-south-1', // Your Nhost region
+  subdomain: 'pcpbxvkqnfgbyqbsydgy', 
+  region: 'ap-south-1', 
 });
 
 export default nhost;
